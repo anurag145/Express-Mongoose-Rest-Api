@@ -13,6 +13,10 @@ mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
 app.use('/api',require('./routes/api'));
+app.use(function(error,request, response,next){
+
+   response.status(422).send({error:" Validation error"});
+});
 
 app.listen(process.env.port || 4000,function(){
 
