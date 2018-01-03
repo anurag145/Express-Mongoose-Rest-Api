@@ -1,21 +1,22 @@
 const express = require('express');
 const bodyParser= require('body-parser');
 const mongoose = require('mongoose');
-
-
+const routes = require('./routes/api');
+const httpStatus= require('http-status');
+const passportSetup =require('./config/passport-setup');
 const app = express();
 
-
+const Promise=require('bluebird');
 mongoose.connect('mongodb://localhost/peddler');
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = Promise;
 
-
+app.use(express.static('public'));
 app.use(bodyParser.json());
-app.use('/api',require('./routes/api'));
+app.use('/api',routes);
 app.use(function(error,request, response,next){
 
-   response.status(422).send({error:" Validation error"});
+   response.status(httpStatus.INTERNAL_SERVER_ERROR).send({error:"Error"});
 });
 
 app.listen(process.env.port || 4000,function(){
