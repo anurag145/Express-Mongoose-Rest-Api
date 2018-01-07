@@ -16,9 +16,10 @@ app.use(bodyParser.json());
 app.use('/api',routes);
 app.use(function(error,request, response,next){
 
-   response.status(httpStatus.INTERNAL_SERVER_ERROR).send({error:"Error"});
-});
+  console.log(error);
+  //console.log(request);
 
+});
 app.listen(process.env.port || 4000,function(){
 
 console.log('now listening');

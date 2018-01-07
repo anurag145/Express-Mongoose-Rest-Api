@@ -6,11 +6,6 @@ const getRoute=require('./get.route');
 const authRoute=require('./auth.route');
 router.use('/peddler',getRoute);
 router.use('/auth',authRoute);
-
-
-
-
-
 router.post('/peddler',function(request,response,next){
   /* Peddler.create(request.body).then(function(peddler){
 response.send(peddler);
