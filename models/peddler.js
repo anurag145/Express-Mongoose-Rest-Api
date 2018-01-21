@@ -10,7 +10,7 @@ name : {
     required:[true,"Name field is required"]	 
 },
 
-num : {
+email : {
 
 	type: String
 }
