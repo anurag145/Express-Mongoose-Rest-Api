@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 
-const peddlerSchema = new Schema({
+const restSchema = new Schema({
 
 name : {
     type:String,
@@ -18,5 +18,5 @@ email : {
 
 });
 
-const Peddler = mongoose.model('peddler', peddlerSchema);
-module.exports = Peddler;
+const rest = mongoose.model('rest', restSchema);
+module.exports = rest;

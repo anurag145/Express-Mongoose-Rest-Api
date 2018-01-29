@@ -3,11 +3,11 @@ const router = express.Router();
 const httpStatus= require('http-status');
 const getRoute=require('./get.route');
 const authRoute=require('./auth.route');
-router.use('/peddler',getRoute);
+router.use('/rest',getRoute);
 router.use('/auth',authRoute);
-router.post('/peddler',function(request,response,next){
-  /* Peddler.create(request.body).then(function(peddler){
-response.send(peddler);
+router.post('/rest',function(request,response,next){
+  /* rest.create(request.body).then(function(rest){
+response.send(rest);
 
 
   }).catch(next);
@@ -16,12 +16,12 @@ response.send(peddler);
 
 });
 
-router.put('/peddler/:id',function(request,response,next){
+router.put('/rest/:id',function(request,response,next){
   /* 
-  Peddler.findByIdAndUpdate({_id:request.params.id},request.body).then(function(){
-   Peddler.findOne({_id:request.params.id}).then(function(peddler){
+  rest.findByIdAndUpdate({_id:request.params.id},request.body).then(function(){
+   rest.findOne({_id:request.params.id}).then(function(rest){
      
-   response.send(peddler);
+   response.send(rest);
 
    });
 
@@ -30,10 +30,10 @@ router.put('/peddler/:id',function(request,response,next){
 
 });
 
-router.delete('/peddler/:id',function(request,response,next){
+router.delete('/rest/:id',function(request,response,next){
    /*console.log(request.params.id);
-   Peddler.findByIdAndRemove({_id:request.params.id}).then(function(peddler){
-    response.send(peddler);
+   rest.findByIdAndRemove({_id:request.params.id}).then(function(rest){
+    response.send(rest);
    });
    */
 });

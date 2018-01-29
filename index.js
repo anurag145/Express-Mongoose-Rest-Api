@@ -7,7 +7,7 @@ const passportSetup =require('./config/passport-setup');
 const app = express();
 
 const Promise=require('bluebird');
-mongoose.connect('mongodb://localhost/peddler');
+mongoose.connect('mongodb://localhost/rest');
 
 mongoose.Promise = Promise;
 

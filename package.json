@@ -1,5 +1,5 @@
 {
-  "name": "Peddler",
+  "name": "rest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anurag145/Peddler-API.git"
+    "url": "git+https://github.com/anurag145/rest-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anurag145/Peddler-API/issues"
+    "url": "https://github.com/anurag145/rest-API/issues"
   },
-  "homepage": "https://github.com/anurag145/Peddler-API#readme",
+  "homepage": "https://github.com/anurag145/rest-API#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
